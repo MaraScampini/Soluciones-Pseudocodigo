@@ -394,4 +394,152 @@ const prompt = require("prompt-sync")();
 
 // console.log(`El importe final a cobrar es ${total}`);
 
-// Realizar un algoritmo que, dado un número entero, visualice en pantalla si es par o impar. En el caso de ser 0, debe visualizar “el número no es par ni impar” (para que un número sea par, se debe dividir entre dos y que su resto sea 0).
+// ------------------------------------
+
+// // Realizar un algoritmo que, dado un número entero, visualice en pantalla si es par o impar. En el caso de ser 0, debe visualizar “el número no es par ni impar” (para que un número sea par, se debe dividir entre dos y que su resto sea 0).
+
+// let num = parseInt(prompt("Introduce un número entero - "))
+
+// if(num === 0){
+//     console.log("El número no es par ni impar")
+// } else if (num % 2 === 0) {
+//     console.log("El número es par")
+// } else {
+//     console.log("El número es impar")
+// }
+
+// // Modificar el algoritmo anterior, de forma que, si se teclea un cero, se vuelva a pedir el número por teclado (así hasta que se teclee un número mayor que cero) (recuerda la estructura mientras).
+
+// let num = parseInt(prompt("Introduce un número entero - "))
+
+// while(num === 0){
+//     num = parseInt(prompt("El número no puede ser cero - "))
+// }
+
+// if (num % 2 === 0) {
+//     console.log("El número es par")
+// } else {
+//     console.log("El número es impar")
+// }
+
+// // Algoritmo que nos diga si una persona puede acceder a cursar un ciclo formativo de grado superior o no. Para acceder a un grado superior, si se tiene un título de bachiller, en caso de no tenerlo, se puede acceder si hemos superado una prueba de acceso.
+
+// console.log("¿Tienes título de Bachillerato?");
+// console.log("1. Sí");
+// console.log("2. No");
+
+// let opcion = Number(prompt("Escoge una opción - "));
+
+// if (opcion === 1) {
+//   console.log("Puedes acceder al ciclo.");
+// } else {
+//   console.log("¿Has realizado prueba de acceso?");
+//   console.log("1. Sí");
+//   console.log("2. No");
+
+//   let opcion = Number(prompt("Escoge una opción - "));
+//   if (opcion === 1) {
+//     let nota = Number(prompt("¿Qué nota has obtenido en la prueba de acceso?"));
+//     if (nota >= 5) {
+//       console.log("Puedes acceder al ciclo.");
+//     } else {
+//       console.log("Lo sentimos, no puedes acceder al ciclo.");
+//     }
+//   } else {
+//     console.log("Lo sentimos, no puedes acceder al ciclo.");
+//   }
+// }
+
+// // Desarrollar un algoritmo que nos calcule el cuadrado de los 9 primeros números naturales (recuerda la estructura desde-hasta).
+
+// for(let i = 1; i <= 9; i++){
+//     console.log(i ** 2)
+// }
+
+// // Se pide representar el algoritmo que nos calcule la suma de los N primeros números naturales. N se leerá por teclado (no tenemos por qué llamar a la variable N, podemos llamarla como queramos).
+
+// let cantidad = Number(prompt("¿Cuántos números quieres sumar? - "))
+// let suma = 0
+// for(let i = 0; i < cantidad; i++){
+//     suma += i
+// }
+
+// console.log(suma)
+
+// // Se pide representar el algoritmo que nos calcule la suma de los N primeros números pares. Es decir, si insertamos un 5, nos haga la suma de 6+8+10+12+14.
+
+// let cantidad = Number(prompt("¿Cuántos pares quieres sumar?"))
+// let comienzo = Number(prompt("¿A partir de qué número?"))
+// let suma = 0
+// for(let i = comienzo; i <= comienzo + cantidad * 2; i++){
+//     if(i % 2 === 0){
+//         suma += i
+//     }
+// }
+
+// console.log(suma)
+
+// // Dada una secuencia de números leídos por teclado, que acabe con un –1, por ejemplo: 5,3,0,2,4,4,0,0,2,3,6, 0,...1; Realizar el algoritmo que calcule la media aritmética. Suponemos que el usuario no insertará números negativos.
+
+// let num = Number(prompt("Introduce un número - "))
+// let numeros = []
+// let suma = 0
+
+// while(num !== -1){
+//     numeros.push(num)
+//     suma += num
+//     num = Number(prompt("Introduce otro número - "))
+// }
+
+// let media = suma / numeros.length
+
+// console.log(media)
+
+// // Teniendo en cuenta que la clave es “eureka”, escribir un algoritmo que nos pida una clave. Solo tenemos 3 intentos para acertar, si fallamos los 3 intentos nos mostrará un mensaje indicándonos que hemos agotado esos 3 intentos (Recomiendo utilizar un interruptor). Si acertamos la clave, saldremos directamente del programa.
+
+// let key = "eureka"
+// let intentos = 1
+// let claveUsuario = prompt("Introduzca la contraseña - ")
+
+// while(intentos < 3 && claveUsuario !== key){
+//         claveUsuario = prompt("Introduzca la contraseña - ")
+//         intentos++
+// }
+
+// if(intentos === 3 && key !== claveUsuario){
+//     console.log("Acceso denegado")
+// } else {
+//     console.log('¡Enhorabuena!')
+// }
+
+// Algoritmo que lea números enteros hasta teclear 0, y nos muestre el máximo, el mínimo y la media de todos ellos. Piensa cómo debemos inicializar las variables.
+
+// let num = Number(prompt("Introduce un número - "))
+// let numeros = []
+
+// while(num !== 0){
+//     numeros.push(num)
+//     num = Number(prompt("Introduce otro número - "))
+// }
+// console.log(numeros)
+
+// let mayor = numeros[0]
+// let menor = numeros[0]
+// let suma = 0
+
+// for(let i = 1; i < numeros.length; i++){
+//     if(numeros[i] > mayor){
+//         mayor = numeros[i]
+//     }
+
+//     if(numeros[i] < menor){
+//         menor = numeros[i]
+//     }
+
+//     suma+=numeros[i]
+// }
+
+// console.log(`El número mayor es ${mayor}, el menor es ${menor} y la media es ${suma/numeros.length}`)
+
+// Algoritmo que visualice la cuenta de los números que son múltiplos de 2 o de 3 que hay entre 1 y 100.
+
